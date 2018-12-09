@@ -1,6 +1,6 @@
-# The program matching users by emails
+# The program matching users by emails (Поиск совпдаения пользовтелей по email)
 
-Для запуска программы понадибтся gradle
+Для запуска программы понадобится gradle
 
 1. Склонируем проект git clone
 2. Переходим в папку с проектом
