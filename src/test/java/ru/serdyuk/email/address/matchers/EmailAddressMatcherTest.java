@@ -17,6 +17,7 @@ public class EmailAddressMatcherTest {
     private final static String testDataUser2 = "user2 -> test4@ya.ru, test5@ya.ru, test6@ya.ru";
     private final static String testDataUser3 = "user3 -> test4@ya.ru, test7@ya.ru, test8@ya.ru";
     private final static String testDataUser4 = "user4 -> test1@ya.ru, test2@ya.ru, test3@ya.ru";
+    private final static String testDataUser5 = "user1 -> test11@ya.ru, test12@ya.ru, test13@ya.ru";
 
     @Test
     public void successMatchAllDifferentEmails() {
@@ -53,6 +54,18 @@ public class EmailAddressMatcherTest {
         Map<String, Set<String>> expectedResult = new HashMap<>();
         expectedResult.put("user1", new HashSet<>(Arrays.asList("test1@ya.ru", "test2@ya.ru", "test3@ya.ru")));
         expectedResult.put("user2", new HashSet<>(Arrays.asList("test4@ya.ru", "test5@ya.ru", "test6@ya.ru", "test7@ya.ru", "test8@ya.ru")));
+
+        Assert.assertEquals(expectedResult, emailAddressMatcher.getResult());
+    }
+
+    @Test
+    public void theSameUserIdWithDifferentEmails() {
+        EmailAddressMatcher emailAddressMatcher = new EmailAddressMatcher();
+        emailAddressMatcher.match(testDataUser1);
+        emailAddressMatcher.match(testDataUser5);
+
+        Map<String, Set<String>> expectedResult = new HashMap<>();
+        expectedResult.put("user1", new HashSet<>(Arrays.asList("test1@ya.ru", "test2@ya.ru", "test3@ya.ru","test11@ya.ru", "test12@ya.ru", "test13@ya.ru")));
 
         Assert.assertEquals(expectedResult, emailAddressMatcher.getResult());
     }
