@@ -23,7 +23,7 @@ public class Main {
                 + "\nuser2 -> foo@gmail.com, ups@pisem.net"
                 + "\nuser3 -> xyz@pisem.net, vasya@pupkin.com"
                 + "\nuser4 -> ups@pisem.net, aaa@bbb.ru"
-                + "\nuser5 -> xyz@pisem.net");
+                + "\nuser5 -> xyz@pisem.net\n");
         Matcher emailAddressMatcher = new EmailAddressMatcher();
         while (scanner.hasNextLine()) {
             String input = scanner.nextLine();

@@ -74,5 +74,4 @@ public class EmailAddressMatcher implements Matcher {
     private static String parseUserId(String input) {
         return input.substring(0, input.indexOf(SEPARATOR_USER_ID_ADDRESS)).trim();
     }
-
 }
