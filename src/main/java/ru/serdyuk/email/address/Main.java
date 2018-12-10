@@ -17,13 +17,13 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите список адерсов пользователей в формате: 'user1 -> xxx@ya.ru, foo@gmail.com, lol@mail.ru'\nПосле ввода нажмите enter"
+        System.out.println("Введите список адерсов пользователей в формате: 'user1 -> xxx@ya.ru, foo@gmail.com, lol@mail.ru'\nПосле ввода нажмите enter\n"
                 + "\nДля примера можно скопировать данные из задачи:"
-                + "\n'user1 -> xxx@ya.ru, foo@gmail.com, lol@mail.ru'"
-                + "\n'user2 -> foo@gmail.com, ups@pisem.net'"
-                + "\n'user3 -> xyz@pisem.net, vasya@pupkin.com'"
-                + "\n'user4 -> ups@pisem.net, aaa@bbb.ru'"
-                + "\n'user5 -> xyz@pisem.net'");
+                + "\nuser1 -> xxx@ya.ru, foo@gmail.com, lol@mail.ru"
+                + "\nuser2 -> foo@gmail.com, ups@pisem.net"
+                + "\nuser3 -> xyz@pisem.net, vasya@pupkin.com"
+                + "\nuser4 -> ups@pisem.net, aaa@bbb.ru"
+                + "\nuser5 -> xyz@pisem.net");
         Matcher emailAddressMatcher = new EmailAddressMatcher();
         while (scanner.hasNextLine()) {
             String input = scanner.nextLine();
